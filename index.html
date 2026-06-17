@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shore &amp; Stay — North Coast Chalet Management Egypt</title>
+  <meta name="description" content="Earn from your Hacienda Ras El Hekma chalet year-round. Professional property management for Hacienda, Marassi & Sidi Abdelrahman chalet owners." />
+  <meta name="google-site-verification" content="-R3jfqWB58GsMCjGd2aL9KOOcO1pqtqlpETKInlgX68" />
+  <meta property="og:title" content="Shore & Stay — North Coast Chalet Management Egypt" />
+  <meta property="og:description" content="Your chalet earns while you're away. Professional management for North Coast Egypt properties." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-deep:    #060D14;
+      --bg-mid:     #0A1520;
+      --bg-surface: #0E1E2C;
+      --bg-card:    #1A3347;
+      --gold:       #C8A96E;
+      --gold-light: #DFC08A;
+      --white:      #F5F0E8;
+      --muted:      rgba(245,240,232,0.5);
+      --border:     rgba(200,169,110,0.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--bg-deep);
+      color: var(--white);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.5rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(6,13,20,0.95), transparent);
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.55rem 1.4rem;
+      transition: all 0.3s ease;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--bg-deep); border-color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 12rem 5vw 6rem;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #060D14 0%, #0A1520 50%, #0E1E2C 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(26,51,71,0.6) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 20% 70%, rgba(200,169,110,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.08;
+      max-width: 820px;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bg-deep);
+      background: var(--gold);
+      padding: 1rem 2.4rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    .btn-ghost {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 1px solid var(--border);
+      padding: 1rem 2.4rem;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 3rem;
+      left: 5vw;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero-scroll::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.4;
+    }
+
+    /* SECTIONS */
+    section { padding: 7rem 5vw; }
+
+    .section-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.2;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-body {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.9;
+    }
+
+    /* PROBLEM */
+    .problem {
+      background: var(--bg-mid);
+      position: relative;
+    }
+
+    .problem::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0.2;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5vw;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .stat-block {
+      text-align: center;
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      background: rgba(26,51,71,0.3);
+    }
+
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .pain-list {
+      list-style: none;
+      margin-top: 2.5rem;
+    }
+
+    .pain-list li {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: 0.95rem;
+      color: rgba(245,240,232,0.7);
+    }
+
+    .pain-list li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 0.05em;
+    }
+
+    /* SERVICES */
+    .services { background: var(--bg-surface); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5px;
+      margin-top: 4rem;
+      background: var(--border);
+    }
+
+    .service-card {
+      background: var(--bg-surface);
+      padding: 2.5rem 2rem;
+      transition: background 0.3s ease;
+    }
+    .service-card:hover { background: var(--bg-card); }
+
+    .service-icon {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .service-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+      color: var(--white);
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* PRICING */
+    .pricing {
+      background: var(--bg-deep);
+      text-align: center;
+    }
+
+    .pricing-box {
+      display: inline-block;
+      margin: 4rem auto 0;
+      padding: 4rem 5rem;
+      border: 1px solid var(--border);
+      background: rgba(26,51,71,0.25);
+      max-width: 680px;
+      width: 100%;
+      position: relative;
+    }
+
+    .pricing-box::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: 20%; right: 20%;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .pricing-split {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin: 2.5rem 0;
+    }
+
+    .split-item {}
+
+    .split-pct {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.5rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .split-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    .pricing-divider {
+      width: 1px;
+      height: 80px;
+      background: var(--border);
+      align-self: center;
+    }
+
+    .pricing-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      line-height: 1.8;
+    }
+
+    /* NUMBERS */
+    .numbers { background: var(--bg-mid); }
+
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .number-card {
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .number-figure {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .number-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ARABIC SECTION */
+    .arabic-section {
+      background: var(--bg-surface);
+      text-align: right;
+      direction: rtl;
+      font-family: 'Noto Serif Arabic', serif;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .arabic-section .section-eyebrow {
+      font-family: 'Noto Serif Arabic', serif;
+      letter-spacing: 0;
+      font-size: 0.85rem;
+    }
+
+    .arabic-section .section-title {
+      font-family: 'Noto Serif Arabic', serif;
+      font-weight: 400;
+      max-width: 100%;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    .arabic-section .section-body {
+      font-family: 'Noto Serif Arabic', serif;
+      max-width: 100%;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+
+    .arabic-points {
+      list-style: none;
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .arabic-points li {
+      padding: 1.2rem 1.5rem;
+      background: rgba(26,51,71,0.3);
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: rgba(245,240,232,0.8);
+      line-height: 1.8;
+      font-family: 'Noto Serif Arabic', serif;
+    }
+
+    /* LEAD FORM */
+    .lead-form {
+      background: linear-gradient(135deg, var(--bg-deep) 0%, #0A1A2A 100%);
+      position: relative;
+    }
+
+    .lead-form::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+
+    .form-container {
+      max-width: 680px;
+      margin: 4rem auto 0;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    input, select, textarea {
+      background: rgba(26,51,71,0.3);
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      padding: 0.9rem 1.1rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--gold);
+    }
+
+    select option { background: var(--bg-card); color: var(--white); }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    .form-submit {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .form-submit button {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bg-deep);
+      background: var(--gold);
+      border: none;
+      padding: 1.1rem 3rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      max-width: 360px;
+    }
+    .form-submit button:hover { background: var(--gold-light); }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--bg-deep);
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      border: 1px solid var(--border);
+      padding: 0.9rem 1.8rem;
+    }
+    .contact-link:hover { color: var(--gold); border-color: var(--gold); }
+
+    .contact-icon { font-size: 1.1rem; }
+
+    /* FOOTER */
+    footer {
+      padding: 2.5rem 5vw;
+      background: #030A10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--gold);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* DIVIDER LINE */
+    .section-line {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+      margin-bottom: 2rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 5vw; }
+      .hero { padding: 9rem 5vw 5rem; }
+
+      .problem-grid { grid-template-columns: 1fr; }
+      .numbers-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .pricing-box { padding: 3rem 2rem; }
+      .pricing-split { gap: 2.5rem; }
+      .split-pct { font-size: 3.5rem; }
+      .arabic-points { grid-template-columns: 1fr; }
+
+      .contact-links { flex-direction: column; align-items: center; }
+      footer { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .numbers-grid { grid-template-columns: 1fr; }
+      .btn-ghost { margin-left: 0; margin-top: 1rem; display: block; text-align: center; }
+    }
+
+    /* SUBTLE ANIMATION */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow,
+    .hero h1,
+    .hero-sub,
+    .hero-ctas {
+      animation: fadeUp 0.9s ease both;
+    }
+    .hero h1    { animation-delay: 0.1s; }
+    .hero-sub   { animation-delay: 0.2s; }
+    .hero-ctas  { animation-delay: 0.3s; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Shore &amp; Stay</a>
+    <a href="#estimate" class="nav-cta">Free Estimate</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <span class="hero-eyebrow">North Coast Egypt · Property Management</span>
+    <h1>Your chalet <em>earns</em><br />while you're away</h1>
+    <p class="hero-sub">We manage your Hacienda, Marassi, or Sidi Abdelrahman property year-round — so every season becomes income.</p>
+    <div class="hero-ctas">
+      <a href="#estimate" class="btn-primary">Get a free rental estimate</a>
+      <a href="#services" class="btn-ghost">How it works</a>
+    </div>
+    <span class="hero-scroll">Scroll to explore</span>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
+    <span class="section-eyebrow">The Opportunity</span>
+    <span class="section-line"></span>
+    <h2 class="section-title">Your chalet sits empty<br />9 months a year</h2>
+    <p class="section-body">The North Coast has a short, intense summer — and most owners walk away from months of potential income because managing a remote property is hard. We make it effortless.</p>
+
+    <div class="problem-grid">
+      <div>
+        <ul class="pain-list">
+          <li>Finding trusted, vetted guests is time-consuming and risky</li>
+          <li>Cleaning and turnover between bookings falls on you</li>
+          <li>Maintenance issues arise when no one is watching</li>
+          <li>Guest communication demands your constant attention</li>
+          <li>Off-season income from weekends and retreats goes untapped</li>
+        </ul>
+      </div>
+      <div>
+        <div class="stat-block" style="margin-bottom: 1.5rem;">
+          <div class="stat-number">EGP 50K</div>
+          <div class="stat-label">Peak week rental · Hacienda Ras El Hekma</div>
+        </div>
+        <div class="stat-block" style="margin-bottom: 1.5rem;">
+          <div class="stat-number">EGP 150K+</div>
+          <div class="stat-label">Average managed income per season</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number">June–Sept</div>
+          <div class="stat-label">Peak season · Plus off-season weekends</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <span class="section-eyebrow">What We Handle</span>
+    <span class="section-line"></span>
+    <h2 class="section-title">Everything. You do nothing.</h2>
+    <p class="section-body">From the first listing to the final key handover, we take care of every detail so you can enjoy passive income without the stress.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3 class="service-title">Multi-Platform Listing</h3>
+        <p class="service-desc">Your property listed on Airbnb, Booking.com, and across social media channels — professionally photographed and written.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3 class="service-title">Guest Screening</h3>
+        <p class="service-desc">Every guest is verified before confirmation. We handle all communication, contracts, and deposits on your behalf.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3 class="service-title">Cleaning & Turnover</h3>
+        <p class="service-desc">Professional cleaning crew between every booking. Linens, restocking, and presentation — handled to hotel standards.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3 class="service-title">Maintenance Coordination</h3>
+        <p class="service-desc">We coordinate repairs, plumbing, AC, and any issues that arise — so your property stays in perfect condition year-round.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗝️</div>
+        <h3 class="service-title">Check-in & Key Handover</h3>
+        <p class="service-desc">Our team handles every arrival and departure. Guests are welcomed personally, and keys are never left unsecured.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3 class="service-title">Monthly Income Reports</h3>
+        <p class="service-desc">Clear, transparent reports every month — bookings, income earned, expenses, and your payout. Nothing hidden.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <span class="section-eyebrow">Our Model</span>
+    <span class="section-line" style="margin: 0 auto 2rem;"></span>
+    <h2 class="section-title" style="max-width:100%;">We only win<br />when you win</h2>
+    <p class="section-body" style="max-width:520px; margin: 0 auto;">No setup fees. No monthly retainers. No surprises. Our success is directly tied to yours.</p>
+
+    <div class="pricing-box">
+      <div class="pricing-split">
+        <div class="split-item">
+          <div class="split-pct">75%</div>
+          <div class="split-label">Your income</div>
+        </div>
+        <div class="pricing-divider"></div>
+        <div class="split-item">
+          <div class="split-pct" style="color: var(--muted); font-size: 3.5rem;">25%</div>
+          <div class="split-label">Our management fee</div>
+        </div>
+      </div>
+      <p class="pricing-note">We take 25% of every booking — only when your property earns. No upfront costs, no lock-in contracts, no hidden charges.</p>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="numbers" id="numbers">
+    <span class="section-eyebrow">Track Record</span>
+    <span class="section-line"></span>
+    <h2 class="section-title">The numbers speak</h2>
+
+    <div class="numbers-grid">
+      <div class="number-card">
+        <div class="number-figure">5+</div>
+        <div class="number-label">Units currently managed</div>
+      </div>
+      <div class="number-card">
+        <div class="number-figure">EGP 150K+</div>
+        <div class="number-label">Average income per property per season</div>
+      </div>
+      <div class="number-card">
+        <div class="number-figure">4 months</div>
+        <div class="number-label">Peak season — June through September</div>
+      </div>
+      <div class="number-card">
+        <div class="number-figure">3 resorts</div>
+        <div class="number-label">Hacienda · Marassi · Sidi Abdelrahman</div>
+      </div>
+      <div class="number-card">
+        <div class="number-figure">Year-round</div>
+        <div class="number-label">Weekend bookings & corporate retreats off-season</div>
+      </div>
+      <div class="number-card">
+        <div class="number-figure">0 EGP</div>
+        <div class="number-label">Upfront — we invest in your property first</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARABIC SECTION -->
+  <section class="arabic-section">
+    <span class="section-eyebrow">Shore &amp; Stay — خدمة إدارة الشاليهات</span>
+    <span class="section-line" style="margin-right: 0; margin-left: auto;"></span>
+    <h2 class="section-title">شاليهك يكسب وأنت مرتاح</h2>
+    <p class="section-body">نحن نتولى إدارة شاليهك في الساحل الشمالي بالكامل — من الإعلان والحجوزات وحتى التسليم الشهري لأرباحك. لا تعب، لا متابعة، فقط دخل شهري واضح.</p>
+
+    <ul class="arabic-points">
+      <li>إعلان على Airbnb وBooking وسوشيال ميديا</li>
+      <li>فرز الضيوف ومتابعة التواصل</li>
+      <li>تنظيف احترافي بين كل حجز</li>
+      <li>متابعة الصيانة والإصلاحات</li>
+      <li>استقبال وتسليم المفاتيح</li>
+      <li>تقرير شهري بالدخل والمصروفات</li>
+    </ul>
+  </section>
+
+  <!-- LEAD FORM -->
+  <section class="lead-form" id="estimate">
+    <span class="section-eyebrow">Get Started</span>
+    <span class="section-line"></span>
+    <h2 class="section-title">Get a free rental estimate</h2>
+    <p class="section-body">Tell us about your property and we'll send you a realistic income projection within 24 hours — no obligation.</p>
+
+    <div class="form-container">
+      <form name="northcoast-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="northcoast-leads" />
+        <input type="hidden" name="bot-field" style="display:none;" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp Number</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+20 1XX XXX XXXX" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="location">Resort / Location</label>
+            <select id="location" name="location" required>
+              <option value="" disabled selected>Select your resort</option>
+              <option value="Hacienda Ras El Hekma">Hacienda Ras El Hekma</option>
+              <option value="Marassi">Marassi</option>
+              <option value="Sidi Abdelrahman">Sidi Abdelrahman</option>
+              <option value="Other North Coast">Other North Coast</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="property-type">Property Type</label>
+            <select id="property-type" name="property_type" required>
+              <option value="" disabled selected>Select type</option>
+              <option value="Chalet">Chalet</option>
+              <option value="Villa">Villa</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Twin house">Twin House</option>
+              <option value="Townhouse">Townhouse</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="message">Tell us about your property (optional)</label>
+            <textarea id="message" name="message" placeholder="Bedrooms, floors, view, any details that help us estimate..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit">Send My Free Estimate Request</button>
+          <p class="form-note">We'll respond within 24 hours via WhatsApp.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <span class="section-eyebrow">Reach Us</span>
+    <span class="section-line" style="margin: 0 auto 2rem;"></span>
+    <h2 class="section-title" style="max-width:100%;">We're here for you</h2>
+    <p class="section-body" style="max-width: 440px; margin: 0 auto;">Prefer to talk directly? Reach us on WhatsApp or email — we respond quickly.</p>
+
+    <div class="contact-links">
+      <a href="https://wa.me/971526900797" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-icon">💬</span>
+        WhatsApp +971 52 690 0797
+      </a>
+      <a href="mailto:mohamedothman.oth@gmail.com" class="contact-link">
+        <span class="contact-icon">✉️</span>
+        mohamedothman.oth@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Shore &amp; Stay</span>
+    <span class="footer-note">North Coast Egypt Property Management · Hacienda · Marassi · Sidi Abdelrahman</span>
+    <span class="footer-note">© 2025 Shore &amp; Stay</span>
+  </footer>
+
+</body>
+</html>
