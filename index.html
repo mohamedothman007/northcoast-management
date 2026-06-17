@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shore &amp; Stay — North Coast Chalet Management Egypt</title>
-  <meta name="description" content="Earn from your Hacienda Ras El Hekma chalet year-round. Professional property management for Hacienda, Marassi & Sidi Abdelrahman chalet owners." />
+  <title>Shore &amp; Stay | North Coast Egypt Chalet Management</title>
+  <meta name="description" content="Earn from your Hacienda Ras El Hekma or Marassi chalet year-round. We handle guests, cleaning, and bookings. You keep 75% of every rental." />
+  <meta name="keywords" content="North Coast Egypt chalet rental management, Hacienda Ras El Hekma property management, Marassi chalet management" />
   <meta name="google-site-verification" content="-R3jfqWB58GsMCjGd2aL9KOOcO1pqtqlpETKInlgX68" />
-  <meta property="og:title" content="Shore & Stay — North Coast Chalet Management Egypt" />
-  <meta property="og:description" content="Your chalet earns while you're away. Professional management for North Coast Egypt properties." />
+  <meta property="og:title" content="Shore &amp; Stay | North Coast Egypt Chalet Management" />
+  <meta property="og:description" content="Earn from your Hacienda Ras El Hekma or Marassi chalet year-round. We handle guests, cleaning, and bookings. You keep 75% of every rental." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+Arabic:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,9 +24,9 @@
       --bg-surface: #0E1E2C;
       --bg-card:    #1A3347;
       --gold:       #C8A96E;
-      --gold-light: #DFC08A;
-      --white:      #F5F0E8;
-      --muted:      rgba(245,240,232,0.5);
+      --teal:       #5BBCCC;
+      --white:      #FFFFFF;
+      --muted:      rgba(255,255,255,0.55);
       --border:     rgba(200,169,110,0.18);
     }
 
@@ -40,207 +41,229 @@
       overflow-x: hidden;
     }
 
-    /* NAV */
+    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 1.5rem 5vw;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background: linear-gradient(to bottom, rgba(6,13,20,0.95), transparent);
-      backdrop-filter: blur(4px);
+      justify-content: space-between;
+      padding: 1.4rem 5vw;
+      background: rgba(6,13,20,0.9);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
     }
 
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
+      font-size: 1.55rem;
+      font-weight: 500;
       color: var(--gold);
-      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-tagline {
+      font-size: 0.66rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
     .nav-cta {
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--white);
+      padding: 0.6rem 1.5rem;
+      cursor: pointer;
       text-decoration: none;
-      border: 1px solid var(--border);
-      padding: 0.55rem 1.4rem;
-      transition: all 0.3s ease;
+      transition: background 0.3s, color 0.3s;
+      white-space: nowrap;
     }
-    .nav-cta:hover { background: var(--gold); color: var(--bg-deep); border-color: var(--gold); }
 
-    /* HERO */
-    .hero {
+    .nav-cta:hover { background: var(--gold); color: var(--bg-deep); }
+
+    /* ── HERO ── */
+    #hero {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      align-items: flex-start;
-      padding: 12rem 5vw 6rem;
+      text-align: center;
+      padding: 10rem 5vw 7rem;
       position: relative;
+      background: radial-gradient(ellipse at 50% 60%, #1A3347 0%, #060D14 70%);
       overflow: hidden;
-      background: linear-gradient(135deg, #060D14 0%, #0A1520 50%, #0E1E2C 100%);
     }
 
-    .hero::before {
+    #hero::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(26,51,71,0.6) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 20% 70%, rgba(200,169,110,0.06) 0%, transparent 50%);
-      pointer-events: none;
+        radial-gradient(ellipse at 25% 35%, rgba(91,188,204,0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 75% 65%, rgba(200,169,110,0.06) 0%, transparent 50%);
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .hero-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.22em;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 2rem;
+      color: var(--teal);
+      margin-bottom: 1.6rem;
     }
 
-    .hero h1 {
+    .hero-headline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 7vw, 6.5rem);
-      font-weight: 300;
+      font-size: clamp(2.8rem, 6.5vw, 5rem);
+      font-weight: 400;
       line-height: 1.08;
-      max-width: 820px;
-      margin-bottom: 2rem;
+      color: var(--white);
+      margin-bottom: 1.6rem;
+      letter-spacing: -0.01em;
     }
 
-    .hero h1 em {
+    .hero-headline em {
       font-style: italic;
-      color: var(--gold-light);
+      color: var(--gold);
     }
 
     .hero-sub {
-      font-size: 1.05rem;
+      font-size: clamp(1rem, 1.5vw, 1.12rem);
       color: var(--muted);
-      max-width: 480px;
-      margin-bottom: 3rem;
+      max-width: 560px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
       line-height: 1.8;
     }
 
-    .btn-primary {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--bg-deep);
-      background: var(--gold);
-      padding: 1rem 2.4rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .btn-primary:hover { background: var(--gold-light); }
-
-    .btn-ghost {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--white);
-      border: 1px solid var(--border);
-      padding: 1rem 2.4rem;
-      text-decoration: none;
-      margin-left: 1.2rem;
-      transition: all 0.3s ease;
-    }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 3rem;
-      left: 5vw;
+    .hero-btns {
       display: flex;
-      align-items: center;
       gap: 1rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .hero-scroll::before {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
+
+    .btn-primary {
       background: var(--gold);
-      opacity: 0.4;
+      color: var(--bg-deep);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.3s, transform 0.25s;
     }
 
-    /* SECTIONS */
-    section { padding: 7rem 5vw; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
 
-    .section-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.22em;
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
+      padding: 1rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.28);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 6.5rem 5vw; }
+
+    .section-label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1rem;
     }
 
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 300;
-      line-height: 1.2;
-      max-width: 700px;
-      margin-bottom: 1.5rem;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.12;
+      color: var(--white);
+      margin-bottom: 1.2rem;
     }
+
+    .section-title em { font-style: italic; color: var(--gold); }
 
     .section-body {
       font-size: 1rem;
       color: var(--muted);
-      max-width: 560px;
-      line-height: 1.9;
+      line-height: 1.85;
     }
 
-    /* PROBLEM */
-    .problem {
+    /* ── PROBLEM / STATS ── */
+    #problem {
       background: var(--bg-mid);
-      position: relative;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-    .problem::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity: 0.2;
-    }
-
-    .problem-grid {
+    .problem-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5vw;
+      gap: 6rem;
       align-items: center;
-      margin-top: 4rem;
     }
 
-    .stat-block {
-      text-align: center;
-      padding: 2.5rem;
-      border: 1px solid var(--border);
-      background: rgba(26,51,71,0.3);
+    .problem-text .section-body { max-width: 420px; }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      background: var(--border);
+    }
+
+    .stat-card {
+      background: var(--bg-surface);
+      padding: 2rem 1.8rem;
     }
 
     .stat-number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 300;
+      font-size: 1.9rem;
+      font-weight: 500;
       color: var(--gold);
       line-height: 1;
       margin-bottom: 0.5rem;
@@ -248,668 +271,746 @@
 
     .stat-label {
       font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
       color: var(--muted);
+      line-height: 1.45;
     }
 
-    .pain-list {
-      list-style: none;
-      margin-top: 2.5rem;
+    /* ── SERVICES ── */
+    #services {
+      background: var(--bg-deep);
     }
 
-    .pain-list li {
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      font-size: 0.95rem;
-      color: rgba(245,240,232,0.7);
+    .services-inner {
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .pain-list li::before {
-      content: '—';
-      color: var(--gold);
-      flex-shrink: 0;
-      margin-top: 0.05em;
-    }
-
-    /* SERVICES */
-    .services { background: var(--bg-surface); }
+    .services-header { margin-bottom: 3.5rem; }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5px;
-      margin-top: 4rem;
       background: var(--border);
     }
 
-    .service-card {
+    .service-item {
       background: var(--bg-surface);
-      padding: 2.5rem 2rem;
-      transition: background 0.3s ease;
+      padding: 2.2rem 2rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      transition: background 0.3s;
     }
-    .service-card:hover { background: var(--bg-card); }
+
+    .service-item:hover { background: var(--bg-card); }
 
     .service-icon {
-      font-size: 1.5rem;
-      margin-bottom: 1.2rem;
-      opacity: 0.8;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      color: var(--gold);
+      margin-top: 0.15rem;
     }
 
     .service-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin-bottom: 0.8rem;
+      font-size: 1.12rem;
+      font-weight: 500;
       color: var(--white);
+      margin-bottom: 0.4rem;
     }
 
     .service-desc {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.6;
     }
 
-    /* PRICING */
-    .pricing {
-      background: var(--bg-deep);
-      text-align: center;
+    /* ── PROCESS ── */
+    #process {
+      background: var(--bg-mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-    .pricing-box {
-      display: inline-block;
-      margin: 4rem auto 0;
-      padding: 4rem 5rem;
-      border: 1px solid var(--border);
-      background: rgba(26,51,71,0.25);
-      max-width: 680px;
-      width: 100%;
+    .process-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .process-header { margin-bottom: 4rem; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
       position: relative;
     }
 
-    .pricing-box::before {
+    .steps::before {
       content: '';
       position: absolute;
-      top: -1px; left: 20%; right: 20%;
+      top: 27px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .step {
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .step-num {
+      width: 54px;
+      height: 54px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--gold);
+      margin: 0 auto 1.6rem;
+      background: var(--bg-mid);
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.12rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .step-desc {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── PRICING ── */
+    #pricing {
+      background: var(--bg-deep);
+    }
+
+    .pricing-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pricing-inner .section-body { max-width: 480px; margin: 0 auto; }
+
+    .pricing-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 4rem 3rem;
+      margin-top: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
       height: 2px;
-      background: var(--gold);
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
 
     .pricing-split {
       display: flex;
       justify-content: center;
-      gap: 4rem;
+      align-items: center;
+      gap: 3rem;
       margin: 2.5rem 0;
     }
 
-    .split-item {}
+    .pricing-side { text-align: center; }
 
-    .split-pct {
+    .pricing-pct {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 4.5rem;
+      font-size: 5.5rem;
       font-weight: 300;
       line-height: 1;
-      color: var(--gold);
+      margin-bottom: 0.3rem;
     }
 
-    .split-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
+    .pricing-pct.yours { color: var(--gold); }
+    .pricing-pct.ours  { color: rgba(255,255,255,0.35); }
+
+    .pricing-who {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-top: 0.4rem;
     }
 
-    .pricing-divider {
-      width: 1px;
-      height: 80px;
-      background: var(--border);
-      align-self: center;
-    }
-
-    .pricing-note {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-top: 1.5rem;
-      line-height: 1.8;
-    }
-
-    /* NUMBERS */
-    .numbers { background: var(--bg-mid); }
-
-    .numbers-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 4rem;
-    }
-
-    .number-card {
-      padding: 2.5rem 1.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .number-figure {
+    .pricing-vs {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
+      font-size: 2.5rem;
+      color: var(--border);
       font-weight: 300;
-      color: var(--gold-light);
-      line-height: 1;
-      margin-bottom: 0.5rem;
     }
 
-    .number-label {
-      font-size: 0.82rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-
-    /* ARABIC SECTION */
-    .arabic-section {
-      background: var(--bg-surface);
-      text-align: right;
-      direction: rtl;
-      font-family: 'Noto Serif Arabic', serif;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .arabic-section .section-eyebrow {
-      font-family: 'Noto Serif Arabic', serif;
-      letter-spacing: 0;
-      font-size: 0.85rem;
-    }
-
-    .arabic-section .section-title {
-      font-family: 'Noto Serif Arabic', serif;
-      font-weight: 400;
-      max-width: 100%;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-    }
-
-    .arabic-section .section-body {
-      font-family: 'Noto Serif Arabic', serif;
-      max-width: 100%;
-      font-weight: 300;
-      font-size: 1rem;
-    }
-
-    .arabic-points {
+    .pricing-features {
       list-style: none;
-      margin-top: 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .arabic-points li {
-      padding: 1.2rem 1.5rem;
-      background: rgba(26,51,71,0.3);
-      border: 1px solid var(--border);
-      font-size: 0.95rem;
-      color: rgba(245,240,232,0.8);
-      line-height: 1.8;
-      font-family: 'Noto Serif Arabic', serif;
-    }
-
-    /* LEAD FORM */
-    .lead-form {
-      background: linear-gradient(135deg, var(--bg-deep) 0%, #0A1A2A 100%);
-      position: relative;
-    }
-
-    .lead-form::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity: 0.3;
-    }
-
-    .form-container {
-      max-width: 680px;
-      margin: 4rem auto 0;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.85rem;
+      margin-top: 2.2rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
     }
 
-    .form-group.full { grid-column: 1 / -1; }
+    .pricing-features li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+    }
+
+    .pricing-features li::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── LEAD FORM ── */
+    #estimate {
+      background: var(--bg-mid);
+      border-top: 1px solid var(--border);
+    }
+
+    .form-outer {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .form-header { margin-bottom: 3rem; }
+    .form-header .section-body { max-width: 440px; }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }
+
+    .fg { display: flex; flex-direction: column; gap: 0.35rem; }
+    .fg.full { grid-column: 1 / -1; }
 
     label {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--muted);
     }
 
     input, select, textarea {
-      background: rgba(26,51,71,0.3);
-      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      border: 1px solid rgba(200,169,110,0.2);
       color: var(--white);
       font-family: 'Jost', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 300;
-      padding: 0.9rem 1.1rem;
+      padding: 0.88rem 1rem;
       outline: none;
-      transition: border-color 0.3s ease;
-      -webkit-appearance: none;
+      width: 100%;
+      transition: border-color 0.3s;
       appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
     }
 
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--gold);
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.22); }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+
+    select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpolyline points='1 1 6 6 11 1' fill='none' stroke='%23C8A96E' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
     }
 
-    select option { background: var(--bg-card); color: var(--white); }
+    select option { background: #0E1E2C; }
 
     textarea { resize: vertical; min-height: 100px; }
 
     .form-submit {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    .form-submit button {
+      grid-column: 1 / -1;
+      background: var(--gold);
+      color: var(--bg-deep);
       font-family: 'Jost', sans-serif;
       font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
+      font-weight: 600;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--bg-deep);
-      background: var(--gold);
+      padding: 1rem 2rem;
       border: none;
-      padding: 1.1rem 3rem;
       cursor: pointer;
-      transition: background 0.3s ease;
-      width: 100%;
-      max-width: 360px;
-    }
-    .form-submit button:hover { background: var(--gold-light); }
-
-    .form-note {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 1rem;
-      text-align: center;
+      margin-top: 0.5rem;
+      transition: opacity 0.3s;
     }
 
-    /* CONTACT */
-    .contact {
-      background: var(--bg-deep);
-      text-align: center;
-      padding-bottom: 4rem;
+    .form-submit:hover { opacity: 0.85; }
+
+    /* ── CONTACT BAR ── */
+    #contact {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 5vw;
     }
 
-    .contact-links {
+    .contact-inner {
+      max-width: 960px;
+      margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
       flex-wrap: wrap;
     }
+
+    .contact-hl {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .contact-hl em { font-style: italic; color: var(--gold); }
+
+    .contact-actions { display: flex; flex-direction: column; gap: 0.9rem; align-items: flex-end; }
+
+    .wa-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: #25D366;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.8rem;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .wa-cta:hover { opacity: 0.88; }
+
+    .contact-links { display: flex; flex-direction: column; gap: 0.4rem; }
 
     .contact-link {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
-      font-size: 0.9rem;
+      gap: 0.5rem;
+      font-size: 0.85rem;
       color: var(--muted);
       text-decoration: none;
-      transition: color 0.3s ease;
-      border: 1px solid var(--border);
-      padding: 0.9rem 1.8rem;
+      transition: color 0.3s;
     }
-    .contact-link:hover { color: var(--gold); border-color: var(--gold); }
 
-    .contact-icon { font-size: 1.1rem; }
+    .contact-link:hover { color: var(--gold); }
+    .contact-link svg { flex-shrink: 0; }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     footer {
+      background: var(--bg-deep);
       padding: 2.5rem 5vw;
-      background: #030A10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 1rem;
     }
 
-    .footer-logo {
+    .footer-brand {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: 500;
       color: var(--gold);
-      font-weight: 400;
-      letter-spacing: 0.06em;
     }
 
-    .footer-note {
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
+    .footer-note { font-size: 0.73rem; color: rgba(255,255,255,0.28); }
+
+    /* ── FLOATING WHATSAPP ── */
+    .wa-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      text-decoration: none;
     }
 
-    /* DIVIDER LINE */
-    .section-line {
-      display: block;
-      width: 48px;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.5;
-      margin-bottom: 2rem;
+    .wa-float::before {
+      content: '';
+      position: absolute;
+      inset: -7px;
+      border-radius: 50%;
+      border: 2px solid rgba(37,211,102,0.45);
+      animation: wapulse 2.2s ease-in-out infinite;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      nav { padding: 1.2rem 5vw; }
-      .hero { padding: 9rem 5vw 5rem; }
-
-      .problem-grid { grid-template-columns: 1fr; }
-      .numbers-grid { grid-template-columns: 1fr 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .pricing-box { padding: 3rem 2rem; }
-      .pricing-split { gap: 2.5rem; }
-      .split-pct { font-size: 3.5rem; }
-      .arabic-points { grid-template-columns: 1fr; }
-
-      .contact-links { flex-direction: column; align-items: center; }
-      footer { flex-direction: column; text-align: center; }
+    @keyframes wapulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0; transform: scale(1.45); }
     }
 
-    @media (max-width: 480px) {
-      .numbers-grid { grid-template-columns: 1fr; }
-      .btn-ghost { margin-left: 0; margin-top: 1rem; display: block; text-align: center; }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .problem-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .steps::before { display: none; }
+      .pricing-split { gap: 2rem; }
+      .contact-inner { flex-direction: column; text-align: center; }
+      .contact-actions { align-items: center; }
     }
 
-    /* SUBTLE ANIMATION */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+    @media (max-width: 620px) {
+      nav { padding: 1rem 4vw; }
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 4.5rem 5vw; }
+      form { grid-template-columns: 1fr; }
+      .fg.full { grid-column: 1; }
+      .form-submit { grid-column: 1; }
+      .pricing-split { flex-direction: column; gap: 1rem; }
+      .pricing-vs { transform: rotate(90deg); }
     }
-
-    .hero-eyebrow,
-    .hero h1,
-    .hero-sub,
-    .hero-ctas {
-      animation: fadeUp 0.9s ease both;
-    }
-    .hero h1    { animation-delay: 0.1s; }
-    .hero-sub   { animation-delay: 0.2s; }
-    .hero-ctas  { animation-delay: 0.3s; }
   </style>
 </head>
-
 <body>
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">Shore &amp; Stay</a>
-    <a href="#estimate" class="nav-cta">Free Estimate</a>
+    <div class="nav-brand">
+      <span class="nav-logo">Shore &amp; Stay</span>
+      <span class="nav-tagline">North Coast Property Management</span>
+    </div>
+    <a href="#estimate" class="nav-cta">Get Free Estimate</a>
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="top">
-    <span class="hero-eyebrow">North Coast Egypt · Property Management</span>
-    <h1>Your chalet <em>earns</em><br />while you're away</h1>
-    <p class="hero-sub">We manage your Hacienda, Marassi, or Sidi Abdelrahman property year-round — so every season becomes income.</p>
-    <div class="hero-ctas">
-      <a href="#estimate" class="btn-primary">Get a free rental estimate</a>
-      <a href="#services" class="btn-ghost">How it works</a>
+  <section id="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Hacienda Ras El Hekma &nbsp;·&nbsp; Marassi &nbsp;·&nbsp; Sidi Abdelrahman</p>
+      <h1 class="hero-headline">Your chalet earns<br><em>while you're away</em></h1>
+      <p class="hero-sub">We manage your North Coast property year-round — guests, cleaning, maintenance, income. You just collect.</p>
+      <div class="hero-btns">
+        <a href="#estimate" class="btn-primary">Get a Free Rental Estimate</a>
+        <a href="https://wa.me/201113130725" target="_blank" rel="noopener" class="btn-outline">WhatsApp Us</a>
+      </div>
     </div>
-    <span class="hero-scroll">Scroll to explore</span>
   </section>
 
-  <!-- PROBLEM -->
-  <section class="problem" id="problem">
-    <span class="section-eyebrow">The Opportunity</span>
-    <span class="section-line"></span>
-    <h2 class="section-title">Your chalet sits empty<br />9 months a year</h2>
-    <p class="section-body">The North Coast has a short, intense summer — and most owners walk away from months of potential income because managing a remote property is hard. We make it effortless.</p>
-
-    <div class="problem-grid">
-      <div>
-        <ul class="pain-list">
-          <li>Finding trusted, vetted guests is time-consuming and risky</li>
-          <li>Cleaning and turnover between bookings falls on you</li>
-          <li>Maintenance issues arise when no one is watching</li>
-          <li>Guest communication demands your constant attention</li>
-          <li>Off-season income from weekends and retreats goes untapped</li>
-        </ul>
+  <!-- PROBLEM + STATS -->
+  <section id="problem">
+    <div class="problem-inner">
+      <div class="problem-text">
+        <span class="section-label">The Opportunity</span>
+        <h2 class="section-title">Your chalet sits empty<br><em>9 months a year</em></h2>
+        <p class="section-body">Most North Coast chalets generate zero income outside peak season. We change that — with professional listing management, vetted guests, and year-round care so your property is always guest-ready.</p>
       </div>
-      <div>
-        <div class="stat-block" style="margin-bottom: 1.5rem;">
+      <div class="stats-grid">
+        <div class="stat-card">
           <div class="stat-number">EGP 50K</div>
-          <div class="stat-label">Peak week rental · Hacienda Ras El Hekma</div>
+          <div class="stat-label">Average weekly rental in peak season</div>
         </div>
-        <div class="stat-block" style="margin-bottom: 1.5rem;">
+        <div class="stat-card">
+          <div class="stat-number">16 wks</div>
+          <div class="stat-label">Peak season June – September</div>
+        </div>
+        <div class="stat-card">
           <div class="stat-number">EGP 150K+</div>
-          <div class="stat-label">Average managed income per season</div>
+          <div class="stat-label">Potential annual income per unit</div>
         </div>
-        <div class="stat-block">
-          <div class="stat-number">June–Sept</div>
-          <div class="stat-label">Peak season · Plus off-season weekends</div>
+        <div class="stat-card">
+          <div class="stat-number">0%</div>
+          <div class="stat-label">Upfront fees to get started</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <span class="section-eyebrow">What We Handle</span>
-    <span class="section-line"></span>
-    <h2 class="section-title">Everything. You do nothing.</h2>
-    <p class="section-body">From the first listing to the final key handover, we take care of every detail so you can enjoy passive income without the stress.</p>
+  <!-- WHAT WE HANDLE -->
+  <section id="services">
+    <div class="services-inner">
+      <div class="services-header">
+        <span class="section-label">What We Handle</span>
+        <h2 class="section-title">Everything —<br><em>so you handle nothing</em></h2>
+      </div>
+      <div class="services-grid">
+        <!-- 1 -->
+        <div class="service-item">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+          <div>
+            <div class="service-title">Listing &amp; Marketing</div>
+            <div class="service-desc">Airbnb, Booking.com, and social media — professional photos, optimised descriptions, dynamic pricing.</div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="service-item">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+          <div>
+            <div class="service-title">Guest Screening &amp; Comms</div>
+            <div class="service-desc">Full guest screening and communication in Arabic and English, from first enquiry to checkout.</div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="service-item">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+          <div>
+            <div class="service-title">Professional Cleaning</div>
+            <div class="service-desc">Hotel-standard cleaning and linen changeover between every guest stay, without exception.</div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="service-item">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+          </svg>
+          <div>
+            <div class="service-title">Maintenance Coordination</div>
+            <div class="service-desc">Rapid response to any issue — we coordinate repairs and upkeep so your property stays in pristine condition.</div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="service-item">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div>
+            <div class="service-title">Key Handover &amp; Check-in</div>
+            <div class="service-desc">Secure key management and on-site check-in — guests are greeted and settled without you ever needing to be there.</div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="service-item">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.0 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          <div>
+            <div class="service-title">Monthly Income Reports</div>
+            <div class="service-desc">Transparent earnings reports sent straight to your WhatsApp every month — bookings, income, and any costs.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <h3 class="service-title">Multi-Platform Listing</h3>
-        <p class="service-desc">Your property listed on Airbnb, Booking.com, and across social media channels — professionally photographed and written.</p>
+  <!-- HOW IT WORKS -->
+  <section id="process">
+    <div class="process-inner">
+      <div class="process-header">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">Four steps to<br><em>passive income</em></h2>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🔍</div>
-        <h3 class="service-title">Guest Screening</h3>
-        <p class="service-desc">Every guest is verified before confirmation. We handle all communication, contracts, and deposits on your behalf.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">✨</div>
-        <h3 class="service-title">Cleaning & Turnover</h3>
-        <p class="service-desc">Professional cleaning crew between every booking. Linens, restocking, and presentation — handled to hotel standards.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🔧</div>
-        <h3 class="service-title">Maintenance Coordination</h3>
-        <p class="service-desc">We coordinate repairs, plumbing, AC, and any issues that arise — so your property stays in perfect condition year-round.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🗝️</div>
-        <h3 class="service-title">Check-in & Key Handover</h3>
-        <p class="service-desc">Our team handles every arrival and departure. Guests are welcomed personally, and keys are never left unsecured.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3 class="service-title">Monthly Income Reports</h3>
-        <p class="service-desc">Clear, transparent reports every month — bookings, income earned, expenses, and your payout. Nothing hidden.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-title">Contact Us</div>
+          <div class="step-desc">We visit your property for a free assessment and give you a realistic income estimate — no obligation.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-title">We List &amp; Photograph</div>
+          <div class="step-desc">Professional photography and listings go live on Airbnb, Booking.com, and social media.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-title">Guests Book</div>
+          <div class="step-desc">We handle all guest communication, check-in, cleaning, and any maintenance — you're not needed.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-title">You Receive 75%</div>
+          <div class="step-desc">Monthly payout — your share of every completed booking, transferred directly to your account.</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <span class="section-eyebrow">Our Model</span>
-    <span class="section-line" style="margin: 0 auto 2rem;"></span>
-    <h2 class="section-title" style="max-width:100%;">We only win<br />when you win</h2>
-    <p class="section-body" style="max-width:520px; margin: 0 auto;">No setup fees. No monthly retainers. No surprises. Our success is directly tied to yours.</p>
-
-    <div class="pricing-box">
-      <div class="pricing-split">
-        <div class="split-item">
-          <div class="split-pct">75%</div>
-          <div class="split-label">Your income</div>
+  <section id="pricing">
+    <div class="pricing-inner">
+      <span class="section-label">Pricing</span>
+      <h2 class="section-title">Simple.<br><em>No upfront cost.</em></h2>
+      <p class="section-body">We only earn when you earn. No monthly fees, no setup costs — just results.</p>
+      <div class="pricing-card">
+        <div class="pricing-split">
+          <div class="pricing-side">
+            <div class="pricing-pct yours">75%</div>
+            <div class="pricing-who">You Keep</div>
+          </div>
+          <div class="pricing-vs">—</div>
+          <div class="pricing-side">
+            <div class="pricing-pct ours">25%</div>
+            <div class="pricing-who">Our Fee</div>
+          </div>
         </div>
-        <div class="pricing-divider"></div>
-        <div class="split-item">
-          <div class="split-pct" style="color: var(--muted); font-size: 3.5rem;">25%</div>
-          <div class="split-label">Our management fee</div>
-        </div>
-      </div>
-      <p class="pricing-note">We take 25% of every booking — only when your property earns. No upfront costs, no lock-in contracts, no hidden charges.</p>
-    </div>
-  </section>
-
-  <!-- NUMBERS -->
-  <section class="numbers" id="numbers">
-    <span class="section-eyebrow">Track Record</span>
-    <span class="section-line"></span>
-    <h2 class="section-title">The numbers speak</h2>
-
-    <div class="numbers-grid">
-      <div class="number-card">
-        <div class="number-figure">5+</div>
-        <div class="number-label">Units currently managed</div>
-      </div>
-      <div class="number-card">
-        <div class="number-figure">EGP 150K+</div>
-        <div class="number-label">Average income per property per season</div>
-      </div>
-      <div class="number-card">
-        <div class="number-figure">4 months</div>
-        <div class="number-label">Peak season — June through September</div>
-      </div>
-      <div class="number-card">
-        <div class="number-figure">3 resorts</div>
-        <div class="number-label">Hacienda · Marassi · Sidi Abdelrahman</div>
-      </div>
-      <div class="number-card">
-        <div class="number-figure">Year-round</div>
-        <div class="number-label">Weekend bookings & corporate retreats off-season</div>
-      </div>
-      <div class="number-card">
-        <div class="number-figure">0 EGP</div>
-        <div class="number-label">Upfront — we invest in your property first</div>
+        <ul class="pricing-features">
+          <li>No monthly retainer or management fee</li>
+          <li>No setup or onboarding costs</li>
+          <li>No fees when the property isn't booked</li>
+          <li>We only earn when you earn</li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- ARABIC SECTION -->
-  <section class="arabic-section">
-    <span class="section-eyebrow">Shore &amp; Stay — خدمة إدارة الشاليهات</span>
-    <span class="section-line" style="margin-right: 0; margin-left: auto;"></span>
-    <h2 class="section-title">شاليهك يكسب وأنت مرتاح</h2>
-    <p class="section-body">نحن نتولى إدارة شاليهك في الساحل الشمالي بالكامل — من الإعلان والحجوزات وحتى التسليم الشهري لأرباحك. لا تعب، لا متابعة، فقط دخل شهري واضح.</p>
-
-    <ul class="arabic-points">
-      <li>إعلان على Airbnb وBooking وسوشيال ميديا</li>
-      <li>فرز الضيوف ومتابعة التواصل</li>
-      <li>تنظيف احترافي بين كل حجز</li>
-      <li>متابعة الصيانة والإصلاحات</li>
-      <li>استقبال وتسليم المفاتيح</li>
-      <li>تقرير شهري بالدخل والمصروفات</li>
-    </ul>
   </section>
 
   <!-- LEAD FORM -->
-  <section class="lead-form" id="estimate">
-    <span class="section-eyebrow">Get Started</span>
-    <span class="section-line"></span>
-    <h2 class="section-title">Get a free rental estimate</h2>
-    <p class="section-body">Tell us about your property and we'll send you a realistic income projection within 24 hours — no obligation.</p>
+  <section id="estimate">
+    <div class="form-outer">
+      <div class="form-header">
+        <span class="section-label">Free Estimate</span>
+        <h2 class="section-title">Get your free<br><em>rental estimate</em></h2>
+        <p class="section-body">Tell us about your property and we'll respond within a few hours with a realistic income projection.</p>
+      </div>
 
-    <div class="form-container">
-      <form name="northcoast-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="northcoast-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="northcoast-leads" />
-        <input type="hidden" name="bot-field" style="display:none;" />
+        <p style="display:none"><label>Do not fill: <input name="bot-field" /></label></p>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="form-group">
-            <label for="whatsapp">WhatsApp Number</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+20 1XX XXX XXXX" required />
-          </div>
+        <div class="fg">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="location">Resort / Location</label>
-            <select id="location" name="location" required>
-              <option value="" disabled selected>Select your resort</option>
-              <option value="Hacienda Ras El Hekma">Hacienda Ras El Hekma</option>
-              <option value="Marassi">Marassi</option>
-              <option value="Sidi Abdelrahman">Sidi Abdelrahman</option>
-              <option value="Other North Coast">Other North Coast</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="property-type">Property Type</label>
-            <select id="property-type" name="property_type" required>
-              <option value="" disabled selected>Select type</option>
-              <option value="Chalet">Chalet</option>
-              <option value="Villa">Villa</option>
-              <option value="Apartment">Apartment</option>
-              <option value="Twin house">Twin House</option>
-              <option value="Townhouse">Townhouse</option>
-            </select>
-          </div>
+        <div class="fg">
+          <label for="whatsapp">WhatsApp Number</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+20 1XX XXX XXXX" required />
         </div>
 
-        <div class="form-row">
-          <div class="form-group full">
-            <label for="message">Tell us about your property (optional)</label>
-            <textarea id="message" name="message" placeholder="Bedrooms, floors, view, any details that help us estimate..."></textarea>
-          </div>
+        <div class="fg">
+          <label for="ptype">Property Type</label>
+          <select id="ptype" name="property_type" required>
+            <option value="" disabled selected>Select type</option>
+            <option>Chalet</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Twinhouse</option>
+          </select>
         </div>
 
-        <div class="form-submit">
-          <button type="submit">Send My Free Estimate Request</button>
-          <p class="form-note">We'll respond within 24 hours via WhatsApp.</p>
+        <div class="fg">
+          <label for="location">Location</label>
+          <select id="location" name="location" required>
+            <option value="" disabled selected>Select compound</option>
+            <option>Hacienda Ras El Hekma</option>
+            <option>Marassi</option>
+            <option>Sidi Abdelrahman</option>
+            <option>Other</option>
+          </select>
         </div>
+
+        <div class="fg">
+          <label for="beds">Number of Bedrooms</label>
+          <select id="beds" name="bedrooms" required>
+            <option value="" disabled selected>Select</option>
+            <option>1 bedroom</option>
+            <option>2 bedrooms</option>
+            <option>3 bedrooms</option>
+            <option>4+ bedrooms</option>
+          </select>
+        </div>
+
+        <div class="fg">
+          <!-- spacer on desktop, hidden on mobile via grid -->
+        </div>
+
+        <div class="fg full">
+          <label for="msg">Message (optional)</label>
+          <textarea id="msg" name="message" placeholder="Any details about your property or questions…"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send My Free Estimate Request</button>
       </form>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <span class="section-eyebrow">Reach Us</span>
-    <span class="section-line" style="margin: 0 auto 2rem;"></span>
-    <h2 class="section-title" style="max-width:100%;">We're here for you</h2>
-    <p class="section-body" style="max-width: 440px; margin: 0 auto;">Prefer to talk directly? Reach us on WhatsApp or email — we respond quickly.</p>
-
-    <div class="contact-links">
-      <a href="https://wa.me/971526900797" class="contact-link" target="_blank" rel="noopener">
-        <span class="contact-icon">💬</span>
-        WhatsApp +971 52 690 0797
-      </a>
-      <a href="mailto:mohamedothman.oth@gmail.com" class="contact-link">
-        <span class="contact-icon">✉️</span>
-        mohamedothman.oth@gmail.com
-      </a>
+  <!-- CONTACT BAR -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div>
+        <h2 class="contact-hl">Ready to start earning<br>from your <em>chalet?</em></h2>
+      </div>
+      <div class="contact-actions">
+        <a href="https://wa.me/201113130725" target="_blank" rel="noopener" class="wa-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12.004 2C6.478 2 2.004 6.477 2.004 12c0 1.868.487 3.623 1.338 5.147L2 22l4.983-1.305A9.952 9.952 0 0012.004 22C17.53 22 22 17.523 22 12S17.53 2 12.004 2zm0 18a7.967 7.967 0 01-4.08-1.123l-.292-.173-3.003.787.803-2.924-.19-.3A7.96 7.96 0 014 12c0-4.411 3.589-8 8.004-8C16.414 4 20 7.589 20 12s-3.586 8-7.996 8z"/>
+          </svg>
+          WhatsApp Us
+        </a>
+        <div class="contact-links">
+          <a href="tel:+201113130725" class="contact-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.0 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+            </svg>
+            +20 111 313 0725
+          </a>
+          <a href="mailto:mohamedothman.oth@gmail.com" class="contact-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+            mohamedothman.oth@gmail.com
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span class="footer-logo">Shore &amp; Stay</span>
-    <span class="footer-note">North Coast Egypt Property Management · Hacienda · Marassi · Sidi Abdelrahman</span>
-    <span class="footer-note">© 2025 Shore &amp; Stay</span>
+    <div class="footer-brand">Shore &amp; Stay</div>
+    <div class="footer-note">North Coast Egypt Property Management &nbsp;·&nbsp; Independent service &nbsp;·&nbsp; © 2025</div>
   </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/201113130725" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12.004 2C6.478 2 2.004 6.477 2.004 12c0 1.868.487 3.623 1.338 5.147L2 22l4.983-1.305A9.952 9.952 0 0012.004 22C17.53 22 22 17.523 22 12S17.53 2 12.004 2zm0 18a7.967 7.967 0 01-4.08-1.123l-.292-.173-3.003.787.803-2.924-.19-.3A7.96 7.96 0 014 12c0-4.411 3.589-8 8.004-8C16.414 4 20 7.589 20 12s-3.586 8-7.996 8z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
